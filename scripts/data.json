@@ -1,0 +1,24 @@
+{
+    "mainTittle":" About Us",
+
+    "subTittle":{
+        "text1":"Think Globally Act Locally.",
+        "text2":"From the start our founding partners lived all over the world before getting together to create RFR. They knew the hurdles and pitfalls that you need to navigate to rent a home, wherever you are.",
+        "text3":"So they formulated a question: how easy should renting a home be?"
+    },
+    "cardA": {
+        "icon1":"fa-solid fa-list-check",
+        "tMission":"Mission",
+        "mission":"Our dream is to make renting as simple and fast as getting a coffee. We work to teleport people into homes anywhere, so they can live the experience without being there. We connect with them. We bring the reality to them."
+    },
+    "cardB": {
+        "icon2":"fa-solid fa-scale-balanced",
+        "tValues":"Values",
+        "values": "We advocate for RFR to be the leading housing lifestyle for the 21st century. We connect the new working generation with their ideal pleace. We deliver a smooth discovery and booking experience"
+    },
+    "cardC": {
+        "icon3":"fa-solid fa-bullseye",
+        "tTarget":"Target",
+        "target":" We strive to make a meaningful impact and build a safe, rental marketplace. We believe that a diverse and inclusive business makes us stronger and helps us build better solutions."
+    }
+}

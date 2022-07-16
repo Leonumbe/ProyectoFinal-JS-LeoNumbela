@@ -1,0 +1,780 @@
+/*Style font
+font-family: 'Dancing Script', cursive;
+font-family: 'Inter', sans-serif;
+font-family: 'Poppins', sans-serif;*/
+
+/*Reset al Css*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.max-width{
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+/*----html scroll slow---------*/
+html{
+  scroll-behavior: smooth;
+}
+
+/*----Navbar header Styling----*/
+/*---Version desktop*/
+.navbar{
+  position:fixed;
+  z-index: 999;
+  width: 100%;
+  padding: 20px 0;
+  font-family: 'Ubuntu', sans-serif;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.757);
+  display: inline;
+}
+/*anulo prop boostrap*/
+
+.navbar .max-width{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a{
+  color:#353d45;
+  font-size: 45px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding-left: 20px;
+}
+.navbar .logo:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+.navbar .logo a span{
+  color: rgb(220, 0, 240);
+  transition: all 0.3s ease;
+}
+.menu{
+  margin-bottom: 0px;
+}
+.navbar .menu li{
+  list-style: none;
+  display: inline-block;
+}
+.navbar .menu li a{
+  display: block;
+  color: #353d45;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+.navbar .menu li a:hover{
+  color: rgb(106, 6, 236);
+}
+/*menu stile btm*/
+.menu-btn{
+  color: rgb(106, 6, 236);
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+.scroll-up-btn{
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: rgb(106, 6, 236);
+  bottom: 10px;
+  right: 30px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  z-index: 999;
+  font-size: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0,3s ease;
+}
+.scroll-up-btn.show{
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
+}
+    
+  /*-----------------------------*/
+  
+  /*-----Home main Stiling---*/
+  /*--version desktop*/
+  
+  .home{
+    display: flex;
+    background-attachment: fixed;
+   /* height: 100vh;*/
+    color: #353d45;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  .home .carousel{
+    position: relative;
+  }
+  .home .carousel-inner img{
+    max-height: 800px;
+  }
+  .home .max-width{
+    margin: auto 0 auto 40px;
+    position: absolute;
+    top: 250px;
+  }
+  .home .home-content .text-1{
+    font-size: 27px;
+  }
+  .home .home-content .text-2{
+   font-size: 75px;
+   font-weight: 600;
+   margin-left: -3px;
+  }
+  .home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+  }
+  .home .home-content .text-3 span{
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    color:  rgb(106, 6, 236);
+  }
+  .home .home-content a{
+    display: inline-block;
+    background: linear-gradient(to right, rgb(106, 6, 236), rgb(220, 0, 240));
+    color: #fff;
+    font-size: 27px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 7.5px;
+    transition:all 0.3s ease;
+  }
+  .home .home-content a:hover{
+    border: 2px solid crimson;
+    color: crimson;
+    background: none;
+  }
+/*--------------------------*/
+/*----General stiling----*/
+/* version desktop */
+section{
+  padding: 100px;
+}
+.title{
+  font-family:  'Dancing Script', cursive;
+  font-weight: 700;
+  color: #353d45;
+  font-size: 75px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.Process, .Rooms{
+  font-family:'Inter', sans-serif;
+}
+/*-----------------------------*/
+  
+/*-----The process Stiling---*/
+/*--version desktop*/
+.Process{
+  background-color: whitesmoke;
+}
+.Process .max-width{
+  display: grid;
+  place-items: center;
+}
+.Process .max-width .title{
+ margin: 50px 0px 25px;
+}
+.process-container{
+  width: 70%;
+  height: auto;
+  position: relative;
+  margin: 50px 0px 25px 0px;
+}
+.process-container ul::after{
+position: absolute;
+content: '';
+width: 2px;
+height: 100%;
+background-image: linear-gradient(to bottom, rgb(106, 6, 236), rgb(220, 0, 240));
+}
+.process-container ul{
+  list-style: none;
+}
+.process-container ul li{
+  background: #fff;
+  width: 50%;
+  height: auto;
+  padding: 15px 20px;
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.382);
+  border-radius: 10px;
+  margin-bottom: 30px;  
+  z-index: 99;
+  position: relative;
+  position: translateX(-30,30);
+}
+.process-container ul li:nth-child(odd){
+  float: left;
+  clear: right;
+  transform: translateX(-30px);
+  text-align: right;
+  left: -30px;
+}
+.process-container ul li:nth-child(even){
+  float: right;
+  clear: left;
+  transform: translateX(30px);
+  text-align: left;
+  left: 30px;
+}
+.process-container ul li:nth-child(5){
+  margin: 0px;
+}
+.process-container ul li .subT{
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+  color: rgb(106, 6, 236);
+  font-size: 30px;
+  font-weight: 700;
+  margin: 10px;
+}
+.process-container ul li .text{
+  font-size: 15px;
+  font-weight: 500;
+  color: #353d45;
+  margin: 5px;
+  line-height: 25px;
+}
+.process-container ul li .step{
+  font-weight: 600;
+  position: absolute;
+  top: -60px;
+  left: 20px;
+  width: 135px;
+  height: 47px;
+  border-radius: 20px;
+  color: #fff;
+  background-image: linear-gradient(to right, rgb(106, 6, 236), rgb(220, 0, 240));
+  display: grid;
+  text-align: center;
+  font-size: 30px;
+}
+.process-container ul li .circle{
+  width: 30px;
+  height: 30px;
+  background-color:rgb(220, 0, 240);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  
+}
+.process-container ul li .circle::after{
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: rgb(106, 6, 236);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.Process .process-container ul li:nth-child(odd) .circle{
+  right: -30px;
+  transform: translate(50%,-50%);
+}
+
+.Process .process-container ul li:nth-child(even) .circle{
+  left: -30px;
+  transform: translate(-50%,-50%);
+}
+
+
+
+/*----Rooms stiling----*/
+/* version desktop */
+.room .room-content{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.room .room-content .card{
+  width: calc(33% - 20px);
+ /* background-image: linear-gradient(to right, rgb(110, 102, 102),#353d45);
+  */text-align: center;
+  border-radius: 8px;
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.382);
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.room .room-content .card:hover{
+  border: 2px solid crimson;
+}
+.room .room-content .card .box{
+  transition: all 0.3s ease;
+}
+.room .room-content .card .box img{
+  margin: auto;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.room .room-content .card .box .head{
+  font-family:'Dancing Script', cursive; 
+  color: rgb(106, 6, 236);
+  font-size: 35px;
+  font-weight: 500;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+.room .room-content .card .box:hover .head{
+  color:#353d45
+} 
+.room .room-content .card .box:hover .price{
+  color: rgb(106, 6, 236);
+}
+.room .room-content .card .box:hover .btn{
+  border: 2px solid crimson;
+  color:crimson;
+  background:none;
+} 
+.room .room-content .card .box .price{
+  color: #353d45;
+  margin: 5px;
+  font-size: 25px;
+}
+.room .room-content .card .box .btn{
+  background: linear-gradient(to right, rgb(106, 6, 236), rgb(220, 0, 240));
+  display: inline-block;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px;
+  padding: 5px 20px ;
+  border-radius: 7.5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.room .room-content .card .box .btn:hover{
+  color:#fff;
+  background: crimson;
+  transform: scale(1.025);
+}
+
+
+  /*--------------------------*/
+
+  
+/*----Footer stiling----*/
+/* version desktop */
+
+footer{
+    background: #fff;
+    padding: 20px 23px;
+    color: #353d45;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  footer span a{
+    font-family:'Dancing Script', cursive; 
+    font-weight: 700;
+    font-size: 25px;
+    color: crimson;
+    text-decoration: none;
+  }
+  footer span a:hover{
+    text-decoration: underline;
+  }
+  footer .social{
+    padding: 10px 0;
+  
+  }
+  footer .social i{
+    font-size: 30px;
+    color: #353d45;
+    transition: all 0.3s easy;
+    padding: 0 5px;
+  }
+  footer .social i:hover{
+    transform: scale(1.15);
+    color: crimson;
+  }
+  
+  
+/*------Page-Booked-------------*/
+.altBooked{
+  background-color: whitesmoke;
+}
+
+.titleAdapt{
+  margin-top: 40px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+.formDate{
+  display: flex;
+  flex-flow: row  wrap;
+}
+.checkIn, .checkOut, .guestSelector{
+  display: flex;
+  flex-direction: column;
+}
+.checkInDate, .checkOutDate{
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0.5rem;
+  width: 250px;
+  text-align: center;
+
+}
+.label{
+  margin: 2rem 8px 1px ;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+}
+.h1adapted{
+  margin-bottom: 2  rem;
+}
+
+.subTAdapt{
+  text-align: center;
+  font-size: 4rem;
+}
+                
+.imgBooked{
+  margin-top: 1rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.382);
+}
+.boxBooked{
+  font-family: 'Ubuntu', sans-serif;
+  padding-left: 0.5rem;
+  margin: 1rem 0rem;
+}
+.btn{
+  background: linear-gradient(to right, rgb(106, 6, 236), rgb(220, 0, 240));
+  display: inline-block;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 7.5px;
+  padding: 5px 10px ;
+  border-radius: 7.5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.btn:hover{
+  color:#fff;
+  background: crimson;
+  transform: scale(1.025);
+}
+.formCss{
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+.formCss input{
+  margin: 0.5rem;
+  padding-left: 1rem;
+}
+.writeTextForm{
+  height: 6rem;
+  text-align: start;
+}
+
+
+
+
+ /*-------------medias queries----------------*/
+
+@media screen and (max-width:1224px){
+  .home .carousel-inner img{
+    height: auto;
+  }
+  .home .home-content .text-1{
+    font-size: 25px;
+  }
+  .home .home-content .text-2{
+    font-size: 70px;
+  }
+  .home .home-content .text-3{
+    font-size: 30px;
+  }
+  .Process .process-container{
+    width: 85%;
+  }
+} 
+@media only screen and (max-width: 950px){
+  .max-width{
+    padding: 0 50px;
+  }
+  .menu-btn{
+    display: block;
+    z-index: 999;
+  }
+  .menu-btn i.active:before{
+    content: "\f00d";
+  }
+  .navbar .menu{
+    position: fixed;
+    left: -100%;
+    top: 0;
+    text-align: center;
+    background: rgb(199, 192, 192);
+    height: 100vh;
+    width: 100%;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+  }
+  .navbar .menu.active{
+    left: 0;
+  }
+  .navbar .menu li{
+    display: block;
+  }
+  .navbar .menu li a{
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+}
+@media screen and (max-width:933px){
+  .home .max-width{
+    top: 200px;
+  }
+  .home .home-content .text-1{
+    font-size: 25px;
+  }
+  .home .home-content .text-2{
+    font-size: 50px;
+  }
+  .home .home-content .text-3{
+    font-size: 25px;
+  }
+  .Process .process-container{
+    width: 80%;
+    transform: translateX(15px);
+  }
+  .Process .process-container ul::after{
+    left: -30px;
+    top: 0;
+  }
+  .Process .process-container ul li{
+    width: 100%;
+    float: none;
+    clear: none;
+    margin-bottom: 80px;
+  } 
+  .process-container ul li:nth-child(odd){
+    transform: translateX(0);
+    text-align: left;
+  }
+  .process-container ul li:nth-child(odd) .step{
+    left: 20px;
+  }
+  .process-container ul li:nth-child(odd) .circle{
+    left: -60px;
+    transform: translate(-50%,-50%);
+  }
+  .process-container ul li:nth-child(even){
+    transform: translateX(0);
+    left: -30px;
+  }
+}
+  
+  
+@media screen and (max-width:900px){
+.room .room-content .card{
+  width: calc(50% - 20px);
+
+  }
+/*pages*/
+.subTAdapt{
+  font-size: 3rem;
+}
+/**/
+/**/
+/**/
+
+}
+
+@media screen and (max-width:740px){
+  .home .carousel-inner img{
+    height: auto;
+  }
+  .home .max-width{
+    top: 150px;
+  }
+  .home .home-content .text-1{
+    font-size: 25px;
+  }
+  .home .home-content .text-2{
+    font-size: 50px;
+  }
+  .home .home-content .text-3{
+    font-size: 25px;
+  }
+  .skills .carousel .subTbox .subTB{
+    display: none;
+  }
+  .skills .subTC{
+    text-align: center;
+    color: rgb(106, 6, 236);
+  }
+  .skills .carousel .contCardBox{
+    justify-content: center;
+  } 
+  .skills .carousel .contCardBox .cardBox{
+    width: 90%;
+    margin: 1rem;
+  }
+}
+
+@media screen and (max-width:700px){
+  .navbar {
+    position: relative;
+  }
+  .home{
+    min-height: 0px;
+  }
+  .room .room-content .card{
+  width:calc(90% - 20px);
+  }
+  /*pages*/
+  .subTAdapt{
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width:580px){
+  .navbar {
+    position: relative;
+  }
+  .home{
+    min-height: 0px;
+  }
+
+  .home .home-content .text-2{
+    font-size: 45px;
+  }
+  .home .home-content .text-3{
+    display: none;
+  }
+  .room .room-content .card{
+    width: calc(100% - 20px);
+    }
+  section{
+    padding: 50px;
+  }
+}
+
+@media only screen and (max-width: 485px){
+  .home{
+    min-height: 0px;
+  }
+  .home .home-content .text-1{
+    font-size: 20px;
+  }
+  .home .home-content .text-2{
+    font-size: 30px;
+  }
+  .home .home-content .text-3{
+    font-size: 27px;
+  }
+  .home .home-content a{
+    font-size: 18px;
+    padding: 8px 20px;
+  }
+}
+
+/*---------------------------------------*/
+
+
+.skills .subTbox{
+margin-bottom: 1rem;
+}
+.skills h2{
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  color:  #353d45;
+}
+.skills .subTA{
+  text-align: center;
+  color: rgb(106, 6, 236);
+}
+.skills .subTbox .subTB{
+  display: block;
+}
+
+.skills .carousel .contCardBox{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 15px;
+  
+} 
+.skills .carousel .cardBox{
+  background: whitesmoke;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.382);
+  padding: 5px 5px;
+  cursor: pointer;
+  width: 31%;
+}
+.skills .carousel .cardBox:hover{
+  background: #353d45;
+}
+.skills .carousel .cardBox .box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  padding: 20px 10px;
+}
+.skills .carousel .cardBox:hover .pText{
+  color: white
+}
+.skills .carousel .cardBox:hover .box{
+  transform: scale(1.05);
+}
+.skills .carousel .cardBox i{
+  font-size: 50px;
+  color:  #353d45;
+  
+  transition: color 0.3s ease;
+}
+.skills .carousel .cardBox:hover i{
+  color: rgb(106, 6, 236);
+}
+.skills .carousel .cardBox .text{
+  font-family: 'Dancing Script', cursive;
+  color:  rgb(220, 0, 240);
+  font-size: 35px;
+  font-weight: 500;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+.skills .carousel .cardBox .pText{
+  font-family:'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #353d45;
+  margin: 5px;
+  line-height: 25px;
+}
