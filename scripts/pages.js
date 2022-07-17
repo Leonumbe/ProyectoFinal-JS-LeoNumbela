@@ -213,8 +213,7 @@ function obtenerFecha(){
 }
 
 function pasajeroDatos(){
-    obtenerFecha()
-    obtenerPasajero()
+    
     
     if(checkIn.value,checkOut.value,pasajeros.value === null || checkIn.value,checkOut.value,pasajeros.value === ''){
         //alert("Select a date and guests to continue")
@@ -239,6 +238,8 @@ function pasajeroDatos(){
             }
         })
     }else{
+        obtenerFecha()
+        obtenerPasajero()
         let dateTotal = 0
         dateTotal += checkOutDate - checkInDate;
         localStorage.setItem("dateTotal", Math.floor(dateTotal / (1000 * 60 * 60 * 24)));
@@ -267,15 +268,15 @@ function pasajeroDatos(){
 
 // funcion para vaciar el storage si no hay reservas seleccionadas
 function refreshStorage () {
-        checkIn = '';
-        checkOut = '';
-        pasajeroSelect = '';
-        userBooked = {};
-        dateTotal = 0;
-        localStorage.setItem('dateTotal',JSON.stringify(dateTotal))
-        localStorage.setItem('check-in',JSON.stringify(checkIn));
-        localStorage.setItem('check-out',JSON.stringify(checkOut));
-        localStorage.setItem('dateTotal',JSON.stringify(dateTotal));
-        localStorage.setItem('pasajeros',JSON.stringify(pasajeroSelect));
-        localStorage.setItem('userBooked', JSON.stringify(userBooked));
-    }
+    checkIn = '';
+    checkOut = '';
+    pasajeroSelect = '';
+    userBooked = {};
+    dateTotal = 0;
+    localStorage.setItem('dateTotal',JSON.stringify(dateTotal))
+    localStorage.setItem('check-in',JSON.stringify(checkIn));
+    localStorage.setItem('check-out',JSON.stringify(checkOut));
+    localStorage.setItem('dateTotal',JSON.stringify(dateTotal));
+    localStorage.setItem('pasajeros',JSON.stringify(pasajeroSelect));
+    localStorage.setItem('userBooked', JSON.stringify(userBooked));
+}
