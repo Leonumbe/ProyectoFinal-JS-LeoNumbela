@@ -129,22 +129,13 @@ function obtenerFecha(){
         : new Date(checkIn.value), localStorage.setItem(checkIn.id, checkIn.value);
         
     //Se reemplaza por TERNARIO
-    //Se reemplaza alert por Sweat
     checkOutDate = (checkOutDate <= checkInDate ) ? 
         Swal.fire({ icon: 'warning', title: 'Mistake', text: "You must choose a date after the checkin date!!!", showConfirmButton: false, timer: 5000})
         : new Date(checkOut.value), localStorage.setItem(checkOut.id, checkOut.value);
-  
-    // //ver validacion
-    // if (localStorage.getItem(dateTotal) == NaN) {
-    //     alert("debe definir fechas")
-    // } else {
-    //     alert("Ha reservado esta habitacion por "+dateTotal/(1000 * 60 * 60 * 24)+" noche/s") 
-    // }
 }
 
 function pasajeroDatos(){
     if(checkIn.value,checkOut.value,pasajeros.value === null || checkIn.value,checkOut.value,pasajeros.value === ''){
-        //alert("Select a date and guests to continue")
         let timerInterval
         Swal.fire({
             title: 'Select a date and guests to continue!',
@@ -172,9 +163,11 @@ function pasajeroDatos(){
         dateTotal += checkOutDate - checkInDate;
         localStorage.setItem("dateTotal", Math.floor(dateTotal / (1000 * 60 * 60 * 24)));
         //SE REEEMPLAZA ALERT POR TOASTIFY
-        //alert("Ha reservado esta habitacion por "+dateTotal/(1000 * 60 * 60 * 24)+" noche/s")
+        // if (dateTotal === NaN || dateTotal==="NaN"||localStorage.getItem("dateTotal", Math.floor(dateTotal / (1000 * 60 * 60 * 24)))){
+        //     console.log("error")
+        // } else {
         Toastify({
-            text:"Ha reservado esta habitacion por "+ dateTotal/(1000 * 60 * 60 * 24)+" noche/s",
+            text:"You`ve booked this room for "+ dateTotal/(1000 * 60 * 60 * 24)+" noche/s",
             duration: 3000,
             gravity: "top", // `top` or `bottom`
             position: "center", // `left`, `center` or `right`
@@ -191,6 +184,7 @@ function pasajeroDatos(){
         setTimeout(() => {
             showDom();
         }, 1000); 
+    
     }
 }
 
