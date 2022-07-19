@@ -643,7 +643,7 @@ footer{
 
 @media screen and (max-width:700px){
   .navbar {
-    position: relative;
+    position: fixed;
   }
   .home{
     min-height: 0px;
@@ -659,7 +659,7 @@ footer{
 
 @media screen and (max-width:580px){
   .navbar {
-    position: relative;
+    position: fixed;
   }
   .home{
     min-height: 0px;
@@ -680,6 +680,11 @@ footer{
 }
 
 @media only screen and (max-width: 485px){
+  .navbar {
+    position: fixed;
+  }        
+        
+
   .home{
     min-height: 0px;
   }
